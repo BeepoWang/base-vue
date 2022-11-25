@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import { normalizePath } from 'vite';
-import path from 'path';
+import vue from '@vitejs/plugin-vue';
 import autoprefixer from 'autoprefixer';
+import path from 'path';
+import { defineConfig, normalizePath } from 'vite';
+import Unocss from 'unocss/vite'
+import { presetAttributify, presetIcons, presetUno } from 'unocss'
 
 
 const variablePath = normalizePath(path.resolve('./src/variable.scss'));
@@ -14,14 +15,6 @@ export default defineConfig({
       // 其中，name 表示当前文件名，local 表示类名
       generateScopedName: "[name]__[local]___[hash:base64:5]"
     },
-    // 进行 PostCSS 配置
-    postcss: {
-      plugins: [
-        autoprefixer({
-          overrideBrowserslist: ['Chrome > 40', 'ff > 31', 'ie 11']
-        })
-      ]
-    },
     // css预处理器配置
     preprocessorOptions: {
       scss: {
@@ -29,5 +22,14 @@ export default defineConfig({
       }
     }
   },
-  plugins: [vue()]
+  plugins: [
+    vue(),
+    Unocss({
+      presets: [
+        presetUno(),
+        presetAttributify(),
+        presetIcons()
+      ]
+    })
+  ]
 })
