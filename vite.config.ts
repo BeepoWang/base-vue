@@ -7,6 +7,11 @@ import viteEslint from 'vite-plugin-eslint'
 const variablePath = normalizePath(path.resolve('./src/variable.scss'))
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
   css: {
     modules: {
       // 其中，name 表示当前文件名，local 表示类名
