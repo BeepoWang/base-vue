@@ -1,7 +1,6 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss';
+import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 
 export default defineConfig({
-  rules: [['custom-rule', { color: 'red' }]],
   shortcuts: {
     'flex-center': 'flex items-center'
   },
@@ -20,4 +19,4 @@ export default defineConfig({
       cdn: 'https://esm.sh/'
     })
   ]
-});
+})
