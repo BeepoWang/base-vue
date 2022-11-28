@@ -25,6 +25,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    'no-empty-source': 'off',
     'no-undef': 'off'
   }
 }
