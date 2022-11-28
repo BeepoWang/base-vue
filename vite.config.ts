@@ -18,11 +18,7 @@ export default defineConfig({
       generateScopedName: '[name]__[local]___[hash:base64:5]'
     },
     // css预处理器配置
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "${variablePath}"`
-      }
-    }
+    preprocessorOptions: {}
   },
   plugins: [vue(), viteEslint(), Unocss()]
 })
