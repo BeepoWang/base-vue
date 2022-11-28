@@ -6,10 +6,7 @@ const localIconPath = 'src/assets/svg-icon'
 const setupIcons = (env: Partial<ImportMetaEnv>) => {
   const { VITE_ICON_LOCAL_PREFIX, VITE_ICON_PREFIX } = env
 
-  const collectionName = VITE_ICON_LOCAL_PREFIX!.replace(
-    `${VITE_ICON_PREFIX}-`,
-    ''
-  )
+  const collectionName = VITE_ICON_LOCAL_PREFIX!.replace(`${VITE_ICON_PREFIX}-`, '')
   return Icons({
     compiler: 'vue3',
     customCollections: {

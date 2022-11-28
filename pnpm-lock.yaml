@@ -17,6 +17,7 @@ specifiers:
   eslint-plugin-vue: ^9.8.0
   husky: ^8.0.2
   lint-staged: ^13.0.3
+  pinia: ^2.0.27
   postcss: ^8.3.3
   postcss-html: ^1.5.0
   prettier: ^2.8.0
@@ -61,6 +62,7 @@ devDependencies:
   eslint-plugin-vue: 9.8.0_eslint@8.28.0
   husky: 8.0.2
   lint-staged: 13.0.3
+  pinia: 2.0.27_mgnvym7yiazkylwwogi5r767ue
   postcss: 8.4.19
   postcss-html: 1.5.0
   prettier: 2.8.0
@@ -3406,6 +3408,24 @@ packages:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
     hasBin: true
+    dev: true
+
+  /pinia/2.0.27_mgnvym7yiazkylwwogi5r767ue:
+    resolution: {integrity: sha512-nOnXP0OFeL8R4WjAHsterU+11vptda643gH02xKNtSCDPiRzVfRYodOLihLDoa0gL1KKuQKV+KOzEgdt3YvqEw==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.4.5
+      typescript: 4.9.3
+      vue: 3.2.45
+      vue-demi: 0.13.11_vue@3.2.45
     dev: true
 
   /pkg-types/1.0.1:

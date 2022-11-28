@@ -4,10 +4,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 const setupAutoComponents = (env: Partial<ImportMetaEnv>) => {
   const { VITE_ICON_LOCAL_PREFIX, VITE_ICON_PREFIX } = env
 
-  const collectionName = VITE_ICON_LOCAL_PREFIX!.replace(
-    `${VITE_ICON_PREFIX}-`,
-    ''
-  )
+  const collectionName = VITE_ICON_LOCAL_PREFIX!.replace(`${VITE_ICON_PREFIX}-`, '')
 
   return Components({
     dts: 'types/components.d.ts',
