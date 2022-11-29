@@ -6,21 +6,14 @@ const store = createPinia()
 
 store.use(
   piniaPersistentStorage({
-    key: 'store',
-    storeList: [
-      {
-        storageType: 'sessionStorage',
-        storeName: ['User'],
-        stateItems: []
-      }
-    ]
+    key: 'Store',
+    storageType: 'sessionStorage'
   })
 )
-
-export * from './modules'
 
 export const setupStore = (app: App) => {
   app.use(store)
 }
 
+export * from './modules'
 export default store
