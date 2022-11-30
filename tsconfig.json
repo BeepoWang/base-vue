@@ -15,6 +15,7 @@
     "skipLibCheck": true,
     "noEmit": true,
     "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "types/*"],
     "paths": {
       "@/*": ["src/*"],
       "#/*": ["types/*"]
@@ -26,7 +27,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "vite.config.ts",
-    "types/vite-env.d.ts",
-    "types/vite-env.d.ts"
-  ]
+    "types/**/*.d.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

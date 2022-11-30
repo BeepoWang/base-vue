@@ -1,19 +1,22 @@
+import { clearToken } from '@/utils/auth'
 import { defineStore } from 'pinia'
 import store from '..'
 
 interface UserState {
-  token: string
   userName: string
 }
 
 const useUserStore = defineStore('User', {
   state: (): UserState => {
     return {
-      token: '',
       userName: 'Test'
     }
   },
-  actions: {},
+  actions: {
+    async userLogout() {
+      clearToken()
+    }
+  },
   getters: {}
 })
 
