@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p class="font-bold">
+    <p class="font-bold cursor-pointer" @click="jumpPage">
       <span class="i-mdi-arrow-left"></span>
-      <a @click="jumpPage">Home</a>
+      <span>Home</span>
     </p>
     <p>User</p>
   </div>

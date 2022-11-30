@@ -1,7 +1,7 @@
 <template>
-  <p class="font-bold">
+  <p class="font-bold cursor-pointer" @click="jumpPage">
     <span class="i-mdi-arrow-left"></span>
-    <a @click="jumpPage">User</a>
+    <span>User</span>
   </p>
   <div>home {{ user.userName }}</div>
 </template>
